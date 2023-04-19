@@ -1,0 +1,65 @@
+
+import requests
+from bs4 import BeautifulSoup
+import csv
+
+
+
+# all the variants for different url links to loop through to get all information of genders/states/races/swim seasons
+genders = ['M','F']
+statecodes = ['al', 'ak', 'az', 'ar', 'ca', 'co', 'ct', 'de', 'fl', 'ga', 'hi', 'id', 'il', 'in', 'ia', 'ks', 'ky', 'la', 'me', 'md', 'ma', 'mi', 'mn', 'ms', 'mo', 'mt', 'ne', 'nv', 'nh', 'nj', 'nm', 'ny', 'nc', 'nd', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'vt', 'va', 'wa', 'wv', 'wi', 'wy']
+event_dict = {
+    '1': 'Free', 
+    '2': 'Back', 
+    '3': 'Breast', 
+    '4': 'Fly', 
+    '5': 'IM'
+}
+race_distance = ['50','100','200','400','500']
+swim_seasons = {
+    '26': '2022-2023', 
+    '25': '2021-2022',
+    '24': '2020-2021',
+    '23': '2019-2020',
+    '22': '2018-2019',
+    '21': '2017-2018',
+    '20': '2016-2017',
+    '19': '2015-2016',
+    '18': '2014-2015',
+    '17': '2013-2014',
+}
+
+#creating csv file for code to go to
+file = open("swimmer_data.csv", "w", newline='', encoding='utf-8')
+writer = csv.writer(file)
+
+#csv header row 
+writer.writerow(["State", "Gender", "Event", "Distance", "Time", "Class", "Swimmer", "Season"])
+
+
+
+#for loops to gather all needed data
+for season_id, season_label in swim_seasons.items():
+    for race_id in race_distance:
+        for newstate in statecodes:
+            for gender_code in genders:
+                for event_number, event in event_dict.items():
+                    url = f"https://www.swimcloud.com/api/splashes/top_times/?dont_group=false&event={event_number}{race_id}&eventcourse=Y&gender={gender_code}&page=1&region=state_{newstate}&season_id={season_id}" 
+                    response = requests.get(url)
+                    swiminfo = response.json()
+
+#definning all other data we don't need a for loop for
+                    for singleresult in swiminfo ['results']:
+                        swimmer_name = singleresult['swimmer']['display_name']
+                        eventtime = singleresult['eventtime']
+                        gender = singleresult['swimmer']['gender']
+                        school_class = singleresult ['swimmer']['school_class']
+                        swimmer_state = singleresult['swimmer']['state']
+                        distance = singleresult ['eventdistance']
+
+#Results!
+                        print(f'{swimmer_state} - {gender} - {event} - {distance} - {eventtime} - {school_class} - {swimmer_name} - {season_label}')
+                        writer.writerow([swimmer_state, gender, event, distance, eventtime, school_class, swimmer_name, season_label])
+
+#The end
+file.close()
