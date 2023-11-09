@@ -1,0 +1,326 @@
+
+-- America's top times by female 50 Freestyle swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'Free'
+	and distance = '50'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 100 Freestyle swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'Free'
+	and distance = '100'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 200 Freestyle swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'Free'
+	and distance = '200'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 500 Freestyle swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'Free'
+	and distance = '500'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 100 Back swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'Back'
+	and distance = '100'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 200 Back swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'Back'
+	and distance = '200'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 100 Breaststroke swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'Breast'
+	and distance = '100'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 200 Breaststroke swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'Breast'
+	and distance = '200'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 100 Fly swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'Fly'
+	and distance = '100'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 200 Fly swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'Fly'
+	and distance = '200'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 100 IM swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'IM'
+	and distance = '100'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by female 400 IM swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'F'
+	and "Event"  = 'IM'
+	and distance = '400'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+
+
+
+-- America's top times by Male 50 Freestyle swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'Free'
+	and distance = '50'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 100 Freestyle swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'Free'
+	and distance = '100'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 200 Freestyle swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'Free'
+	and distance = '200'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 500 Freestyle swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'Free'
+	and distance = '500'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 100 Back swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'Back'
+	and distance = '100'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 200 Back swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'Back'
+	and distance = '200'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 100 Breaststroke swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'Breast'
+	and distance = '100'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 200 Breaststroke swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'Breast'
+	and distance = '200'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 100 Fly swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'Fly'
+	and distance = '100'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 200 Fly swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'Fly'
+	and distance = '200'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 100 IM swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'IM'
+	and distance = '100'
+	and state is not null
+	and state != ''
+order by 3,4;
+
+
+-- America's top times by Male 400 IM swimmers 2015-2023
+
+select state, gender, season, "Time", swimmer, "Event", distance 
+from swimmer_data sd 
+where gender = 'M'
+	and "Event"  = 'IM'
+	and distance = '400'
+	and state is not null
+	and state != ''
+order by 4;
+
+
+--Best seasons for every state over all 
+
+select state, season, count(*)
+from first_place_states
+group by state, season
+order by 3 desc
+
+
+-- first place swimmers view for every state, season, gender, & race
+
+create or replace view first_place_swimmers as
+select *
+from (
+	select *,
+           ROW_NUMBER() OVER (PARTITION BY state, gender, "Event", distance, season  
+           ORDER BY "Time" ASC) as rn
+    FROM swimmer_data sd
+    where state != ''
+) as t
+where rn = 1
+
+
+-- first place states
+
+create or replace view first_place_states as
+select *
+from (
+	select *,
+           ROW_NUMBER() OVER (PARTITION BY gender, "Event", distance, season  
+           ORDER BY "Time" ASC) as rn
+    FROM swimmer_data sd
+    where state != ''
+) as t
+where rn = 1
